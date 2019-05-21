@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Count Down</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+      <button type="button" name="button" onclick="toggleSlideMenu();">
+        <img src="img/blackmenubars.svg.png" id='nav-btn' alt="navbars">
+      </button>
+      <h1>Count Down</h1>
+  </header>
+  <div id="side-menu">
+      <ul id="side-list">
+        <li id='newyearnav' onclick="newYear()">New Year</li>
+        <li id='vdaynav' onclick="valentinesDay()">Valentines Day</li>
+        <li id='stpdaynav' onclick="stPatricksDay()">St. Patricks Day</li>
+        <li id='july4nav' onclick="independenceDay()">Independence Day</li>
+        <li id='oct31nav' onclick="halloween()">Halloween</li>
+        <li id='christmasnav' onclick="christmas()">Christmas</li>
+      </ul>
+  </div>
+
+  <main id='main'>
+    <canvas id="canvas"></canvas>
+    <div class="text">
+      <div class="countdown"></div>
+      <div class="countdown-msg"></div>
+    </div>
+
+  </main>
+  <script src="main.js" charset="utf-8"></script>
+</body>
+</html>

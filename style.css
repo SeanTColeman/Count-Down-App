@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: monospace;
+  font-size: 18px;
+  height: 100vh;
+}
+
+header {
+  padding: 20px;
+  height: 40px;
+  background: #ccc;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 7px 6px -6px black;
+}
+
+button,
+button:focus {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+
+h1 {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+}
+
+#nav-btn {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#nav-btn:hover {
+  background: hsla(360, 100%, 100%, 0.5);
+}
+
+#side-menu {
+  background: #ddd;
+  opacity: .9;
+  position: absolute;
+  z-index: 2;
+  top: 80px;
+  width: 400px;
+  margin: 0 0 0 -400px;
+  transition: .2s ease-in;
+}
+
+#side-list li {
+  list-style: none;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#side-list li:hover {
+  background: hsla(360, 100%, 100%, 0.5);
+}
+
+canvas {
+  width: 100vw;
+  height: calc(100vh - 80px);
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  font-size: 50px;
+  text-align: center;
+  background: #ccc;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
