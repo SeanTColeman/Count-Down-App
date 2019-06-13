@@ -23,7 +23,7 @@ var toggleSlideMenu = () => {
 
 var daysTillChristmas = () => {
   var christmas = new Date(today.getFullYear(), 11, 25);
-  if (today.getMonth() >= 11 && today.getDate() >= 25) {
+  if (today >= christmas) {
   christmas.setFullYear(christmas.getFullYear() + 1);
   }
   var oneDay = 1000 * 60 * 60 * 24;
@@ -61,6 +61,8 @@ var newYear = () => {
   newYearsStyles();
 }
 
+window.onload = newYear();
+
 var daysTillThanksgiving = () => {
   var thanksgiving = new Date(today.getFullYear(), 11, 25);
   if (today.getMonth() >= 11 && today.getDate() >= 25) {
@@ -84,7 +86,7 @@ var thanksgiving = () => {
 
 var daysTillHalloween = () => {
   var halloween = new Date(today.getFullYear(), 9, 31);
-  if (today.getMonth() >= 9 && today.getDate() >= 31) {
+  if (today >= halloween) {
   halloween.setFullYear(halloween.getFullYear() + 1);
   }
   var oneDay = 1000 * 60 * 60 * 24;
@@ -105,7 +107,7 @@ var halloween = () => {
 
 var daysTillIndependence = () => {
   var independence = new Date(today.getFullYear(), 6, 4);
-  if (today.getMonth() >= 6 && today.getDate() >= 4) {
+  if (today >= independence) {
   independence.setFullYear(independence.getFullYear() + 1);
   }
   var oneDay = 1000 * 60 * 60 * 24;
@@ -115,7 +117,7 @@ var daysTillIndependence = () => {
 }
 
 var independenceDayStyles = () => {
-  main.style.background = 'linear-gradient(red, white)';
+  main.style.background = 'linear-gradient(red, blue)';
   main.style.color = 'white;'
 }
 
@@ -126,8 +128,8 @@ var independenceDay = () => {
 
 var daysTillValentines = () => {
   var vDay = new Date(today.getFullYear(), 1, 14);
-  if (today.getMonth() >= 1 && today.getDate() >= 14) {
-  vDay.setFullYear(vDay.getFullYear() + 1);
+  if (today >= vDay) {
+    vDay.setFullYear(vDay.getFullYear() + 1);
   }
   var oneDay = 1000 * 60 * 60 * 24;
   var daysTillVDay = Math.ceil((vDay.getTime() - today.getTime()) / oneDay);
@@ -147,7 +149,7 @@ var valentinesDay = () => {
 
 var daysTillStPattysDay = () => {
   var stPattys = new Date(today.getFullYear(), 2, 17);
-  if (today.getMonth() >= 2 && today.getDate() >= 17) {
+  if (today >= stPattys) {
   stPattys.setFullYear(stPattys.getFullYear() + 1);
   }
   var oneDay = 1000 * 60 * 60 * 24;
